@@ -5,35 +5,61 @@ JavaScript ist eine dynamische, schwach typisierte Sprache, die verschiedene Dat
 ## Primitive Datentypen
 
 ### 1. Zahl (`Number`)
+
 Beispiel: `let num = 42;`
 
 ### 2. Zeichenkette (`String`)
+
 Beispiel: `let text = 'Hallo';`
 
 ### 3. Boolescher Wert (`Boolean`)
+
 Beispiel: `let isTrue = true;`
 
 ### 4. Undefined (`undefined`)
+
 Beispiel: `let x; // x ist undefined`
 
 ### 5. Null (`null`)
+
 Beispiel: `let y = null;`
 
 ### 6. Symbol (`Symbol`)
+
 Beispiel: `let sym = Symbol('beschreibung');`
 
 ## Zusammengesetzte Datentypen
 
 ### 1. Objekt (`Object`)
+
 Beispiel: `let obj = { name: 'John', alter: 30 };`
 
 ### 2. Array (`Array`)
+
 Beispiel: `let arr = [1, 2, 3, 4];`
 
 ### 3. Funktion (`Function`)
+
 Beispiel:
+
 ```javascript
 function greet(name) {
-  return 'Hallo, ' + name + '!';
+  return "Hallo, " + name + "!";
 }
+```
+
+## Datentypen Überprüfen
+
+```javascript
+let age = 18;
+
+if (typeof age == "number") {
+  console.log("age is a number");
+}
+// output: age is a number
+
+if (age.constructor == Array) {
+  console.log("age is an array");
+}
+// output: nichts
 ```
