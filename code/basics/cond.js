@@ -39,13 +39,13 @@ if (shouldCallFunc) {
   abc();
 }
 
-// shouldCallFunc && abc();
+shouldCallFunc && abc();
 
 let notExistFunc;
 
 // notExistFunc = abc;
 
-// notExistFunc && notExistFunc();
+notExistFunc && notExistFunc();
 notExistFunc?.notExistFunc?.notExistFunc?.();
 
 // -- random number

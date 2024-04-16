@@ -8,28 +8,28 @@ JavaScript bietet verschiedene Möglichkeiten, um Verzweigungen und bedingte Anw
 let zahl = 10;
 
 if (zahl > 0) {
-  console.log('Die Zahl ist positiv');
+  console.log("Die Zahl ist positiv");
 } else if (zahl === 0) {
-  console.log('Die Zahl ist Null');
+  console.log("Die Zahl ist Null");
 } else {
-  console.log('Die Zahl ist negativ');
+  console.log("Die Zahl ist negativ");
 }
 ```
 
 Die if-Anweisung ermöglicht es, einen Codeblock auszuführen, wenn eine Bedingung wahr ist. Mit else if können zusätzliche Bedingungen überprüft werden, während else einen Standardcodeblock definiert, der ausgeführt wird, wenn keine der vorherigen Bedingungen zutrifft.
 
 ```javascript
-let tag = 'Montag';
+let tag = "Montag";
 
 switch (tag) {
-  case 'Montag':
-    console.log('Heute ist Montag');
+  case "Montag":
+    console.log("Heute ist Montag");
     break;
-  case 'Dienstag':
-    console.log('Heute ist Dienstag');
+  case "Dienstag":
+    console.log("Heute ist Dienstag");
     break;
   default:
-    console.log('Heute ist kein bekannter Wochentag');
+    console.log("Heute ist kein bekannter Wochentag");
 }
 ```
 
@@ -39,8 +39,28 @@ Die switch-Anweisung ermöglicht es, eine Vielzahl von Bedingungen zu überprüf
 
 ```javascript
 let alter = 20;
-let status = (alter >= 18) ? 'Volljährig' : 'Minderjährig';
+let status = alter >= 18 ? "Volljährig" : "Minderjährig";
 console.log(status);
 ```
 
 Der ternäre Operator (? :) ermöglicht es, eine Bedingung in einem einzigen Ausdruck auszuwerten. Wenn die Bedingung wahr ist, wird der Ausdruck vor dem : ausgeführt, andernfalls der Ausdruck danach.
+
+## Beispiel 4: Null Safe Operator
+
+```js
+let notExistFunc;
+
+notExistFunc && notExistFunc();
+
+// oder
+
+notExistFunc?.();
+
+// oder mit boolean
+
+let shouldCallFunc = true;
+
+const myFunc = () => console.log("Hello World");
+
+shouldCallFunc && myFunc(); // output: Hello World
+```

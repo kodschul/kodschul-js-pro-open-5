@@ -1,10 +1,10 @@
 let greet = () => "Hello";
 
-function doComplex(a, b, c = 1) {
+function doComplex({ a = 1, b = 1, c = 1 }) {
   return a * b * c;
 }
 
-console.log(doComplex(1, 2, 2));
+console.log(doComplex({ a: 1 }));
 
 let x = 0;
 let y = 1;
@@ -33,6 +33,15 @@ function fact(n) {
 console.log(fact(4));
 
 // -- scopes
+
+var abc = 5;
+
+const abcFunc = () => {
+  var abc = 10;
+  console.log(abc);
+};
+abcFunc();
+console.log(abc);
 
 {
   let blockVariable = "Ich bin ein Block";
