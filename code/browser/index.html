@@ -9,16 +9,90 @@
 
 <body>
 
-    Browser
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+
+    <h1>Welcome to DOM Manipulation</h1>
 
 
-    <button onclick="showClipboard()">Show Clipboard</button>
+
+    <p id="message" class="hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel condimentum elit.
+        Vestibulum
+        tempus tortor mi,
+        et finibus mi varius molestie. Phasellus sit amet arcu elit. Praesent eget metus in lorem tempus interdum. Nam
+        non velit quis lacus cursus tincidunt et ullamcorper sapien. Vivamus pretium at turpis eget lacinia. Vestibulum
+        nisl nisi, scelerisque at elementum sed, bibendum eget diam. Maecenas efficitur laoreet libero, a aliquet diam
+        aliquam sed. Curabitur eget nisi sit amet nunc pulvinar dapibus.</p>
 
 
+    <button id="showTextBtn" onclick="showText()">Show Text</button>
+    <button id="hideTextBtn" class="hide" onclick="hideText()">Hide Text</button>
+
+    <!-- <img src="https://rigle.co/_next/static/images/rigle-wordmark-4bd51ecaedceb3dc9d4544ebce2438f9.png" /> -->
+
+    <script>
+        const messageEl = document.getElementById("message")
+        const showTextBtnEl = document.getElementById("showTextBtn")
+        const hideTextBtnEl = document.getElementById("hideTextBtn")
+
+        const messageElSelector = document.querySelector("#message")
+
+
+        const abc = document.createElement("p")
+
+        abc.textContent = "Bla bla bla bla"
+
+
+        document.body.appendChild(abc)
+
+
+        messageElSelector.style.background = "yellow"
+
+        // console.log(messageEl.style.background, messageElSelector.style.background)
+
+
+        function showText() {
+
+            if (messageEl.classList.contains("hide")) {
+                messageEl.classList.remove("hide")
+            }
+
+            if (hideTextBtnEl.classList.contains("hide")) {
+                hideTextBtnEl.classList.remove("hide")
+            }
+
+
+            if (!showTextBtnEl.classList.contains("hide")) {
+                showTextBtnEl.classList.add("hide")
+            }
+
+        }
+
+        function hideText() {
+            if (!messageEl.classList.contains("hide")) {
+                messageEl.classList.add("hide")
+            }
+
+            if (!hideTextBtnEl.classList.contains("hide")) {
+                hideTextBtnEl.classList.add("hide")
+            }
+
+            if (showTextBtnEl.classList.contains("hide")) {
+                showTextBtnEl.classList.remove("hide")
+            }
+        }
+
+
+    </script>
+
+
+    <!-- <button onclick="showClipboard()">Show Clipboard</button>
     <button onclick="setClipboard('abc')">Set Clipboard</button>
-
-
-    <script src="clipboard.js"></script>
+    <script src="clipboard.js"></script> -->
 </body>
 
 </html>

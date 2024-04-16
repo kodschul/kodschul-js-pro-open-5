@@ -1,3 +1,19 @@
+// --- date
+
+let date = new Date();
+
+let date1 = new Date("2024-04-15");
+let date2 = new Date("2024-04-16");
+
+if (date1 < date2) {
+  console.log("date1 is smaller");
+} else {
+  console.log("date1 is NOT smaller");
+}
+process.exit(0);
+
+// --- basics
+
 let name = process.argv[2];
 // let age = process.argv[3];
 let age = undefined;
