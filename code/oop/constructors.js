@@ -5,6 +5,10 @@ function Person(name, age) {
 
   this.name = name;
   this.age = age;
+
+  this.greet = function () {
+    console.log("Hi ", this.name);
+  };
 }
 
 function createPerson(name, age) {
@@ -16,4 +20,4 @@ const alice = new Person("Alice", 18);
 
 const bob = createPerson("Bob", 12);
 
-console.log({ franz: franz, alice, bob });
+console.log({ franz, bob });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularverarbeitung</title>
+</head>
+
+<body>
+    <form id="myForm" method="POST">
+        <input type="hidden" name="csrf_token" value="adsadasdasdasdsadsadsaas">
+        <input type="text" id="username" name="username" placeholder="Benutzername">
+
+        <input type="date">
+        <input type="datetime">
+        <input type="datetime-local">
+        <input type="password" id="password" name="password" value="123" placeholder="Passwort" required>
+        <button>Anmelden</button>
+
+        <button type="button">Test</button>
+        <button type="reset">Reset defaults</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+
+
+        form.onsubmit = function (event) {
+            event.preventDefault(); // Verhindert das Standardverhalten des Formulars (Seitenneuladen)
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            console.log('Benutzername:', username);
+            console.log('Passwort:', password);
+            // // Hier können weitere Aktionen wie Datenvalidierung und -übermittlung durchgeführt werden
+        }
+
+    </script>
+</body>
+
+</html>

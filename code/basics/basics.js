@@ -1,5 +1,7 @@
 // --- date
 
+console.log(process.memoryUsage());
+
 let date = new Date();
 
 let date1 = new Date("2024-04-15");
@@ -10,6 +12,8 @@ if (date1 < date2) {
 } else {
   console.log("date1 is NOT smaller");
 }
+
+console.log(process.memoryUsage());
 process.exit(0);
 
 // --- basics

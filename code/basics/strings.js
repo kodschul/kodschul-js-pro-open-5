@@ -16,9 +16,13 @@ process.exit(0);
 
 // strings
 
-let x = "   Hello World Hello World  ";
+let abc = ["a,b", "b", "c"];
 
-console.log(x.charAt(x.length - 1));
+console.log(abc.join("."));
+
+let x = "   Hello World Hello World";
+
+console.log(x.charAt(x.length - 1), x[x.length - 1]);
 
 console.log(x.substring(0, 5));
 
