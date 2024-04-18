@@ -10,6 +10,8 @@ try {
   console.log(divide(10, 0)); // Ausnahme auslösen
 } catch (error) {
   console.error(error.message); // Ausnahme behandeln
+} finally {
+  console.log("hier geht es weiter");
 }
 
 // custom errors
