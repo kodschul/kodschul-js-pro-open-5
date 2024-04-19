@@ -19,7 +19,7 @@
     <h1>Welcome to DOM Manipulation</h1>
 
 
-
+    <!-- 
     <p id="message" class="hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel condimentum elit.
         Vestibulum
         tempus tortor mi,
@@ -30,9 +30,15 @@
 
 
     <button id="showTextBtn" onclick="showText()">Show Text</button>
-    <button id="hideTextBtn" class="hide" onclick="hideText()">Hide Text</button>
+    <button id="hideTextBtn" class="hide" onclick="hideText()">Hide Text</button> -->
 
     <!-- <img src="https://rigle.co/_next/static/images/rigle-wordmark-4bd51ecaedceb3dc9d4544ebce2438f9.png" /> -->
+
+    <button onclick="showClipboard()">Show Clipboard</button>
+    <button onclick="setClipboard('abc')">Set Clipboard</button>
+
+
+    <script src="clipboard.js"></script>
 
     <script>
         const messageEl = document.getElementById("message")
@@ -128,9 +134,7 @@
 
     </script>
 
-    <!-- <button onclick="showClipboard()">Show Clipboard</button>
-    <button onclick="setClipboard('abc')">Set Clipboard</button>
-    <script src="clipboard.js"></script> -->
+
 </body>
 
 </html>

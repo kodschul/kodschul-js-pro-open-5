@@ -4,6 +4,21 @@ async function expensiveCalculation() {
   return 1000;
 }
 
+async function doWorkSync(x) {
+  return expensiveCalculation().then((value1) => {
+    console.log("Expensive calculation done: ", value1);
+
+    return expensiveCalculation().then((value2) => {
+      return value1 * value2;
+    });
+  });
+
+  const value1 = await expensiveCalculation();
+  const value2 = await expensiveCalculation();
+
+  return value1 * value2;
+}
+
 async function doWork() {
   let values = await Promise.all([
     expensiveCalculation(),
@@ -15,4 +30,8 @@ async function doWork() {
   console.log("Resume with code");
 }
 
-doWork();
+async function x() {
+  console.log(await doWorkSync(10));
+}
+
+x();

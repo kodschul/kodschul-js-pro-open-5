@@ -4,6 +4,8 @@ fileInput.addEventListener("change", function (event) {
   // Dateiobjekt auswählen
   let file = event.target.files[0];
 
+  console.log(file);
+
   // FileReader-Objekt erstellen
   let reader = new FileReader();
 
