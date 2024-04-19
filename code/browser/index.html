@@ -16,7 +16,7 @@
         }
     </style>
 
-    <h1>Welcome to DOM Manipulation</h1>
+    <h1 id="welcome">Welcome to DOM Manipulation</h1>
 
 
     <!-- 
@@ -37,6 +37,14 @@
     <button onclick="showClipboard()">Show Clipboard</button>
     <button onclick="setClipboard('abc')">Set Clipboard</button>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"> </script>
+
+
+    <script>
+
+        $("#welcome").html("Test")
+
+    </script>
 
     <script src="clipboard.js"></script>
 
