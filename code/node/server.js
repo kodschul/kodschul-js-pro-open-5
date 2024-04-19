@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
 
 const users = [
   { id: 1, name: "John" },
@@ -10,8 +13,9 @@ app.get("/api/users", (req, res) => {
   res.json(users);
 });
 
-app.get("/api/create-user", (req, res) => {
-  users.push({ id: users.length + 1, name: req.query.name });
+app.post("/api/create-user", (req, res) => {
+  req.body;
+  users.push({ id: users.length + 1, name: req.body.name });
 
   res.send("ok");
 });
