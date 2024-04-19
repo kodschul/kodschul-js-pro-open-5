@@ -10,7 +10,13 @@ const users = [
 ];
 
 app.get("/api/users", (req, res) => {
-  res.json(users);
+  if (req.query.name) {
+    // search
+    // ....
+  } else {
+    // send all
+    res.json(users);
+  }
 });
 
 app.post("/api/create-user", (req, res) => {
