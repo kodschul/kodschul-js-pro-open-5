@@ -1,6 +1,8 @@
-function sum(x, y) {
-  return x + y;
-}
+// function sum(x, y) {
+//   return x + y;
+// }
+
+const sum = (x, y) => x + y;
 
 function multiply(x, y) {
   return x * y;
@@ -12,6 +14,7 @@ function createUser(name) {
     name: name,
     firstName: name.split(" ")[0],
     lastName: name.split(" ")[1],
+    age: 10,
   };
 }
 

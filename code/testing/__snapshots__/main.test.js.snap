@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main should create new user 1`] = `
+exports[`Math should create user 1`] = `
 {
-  "firstName": "John",
-  "id": "JohnDoe1",
-  "lastName": "Doe",
-  "name": "John Doe",
+  "age": 10,
+  "firstName": "A",
+  "id": "AB1",
+  "lastName": "B",
+  "name": "A B",
 }
 `;
